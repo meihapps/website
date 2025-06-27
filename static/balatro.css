@@ -1,0 +1,24 @@
+.card {
+    animation-name: ambientMovement;
+    animation-duration: 4000ms;
+    animation-delay: calc(-4000ms * var(--rand));
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform: rotateZ(calc(var(--ambientAmount) * 10deg));
+}
+
+@keyframes ambientMovement {
+    0%,
+    100% {
+        --ambientAmount: 0.1;
+    }
+    50% {
+        --ambientAmount: -0.1;
+    }
+}
+
+@property --ambientAmount {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0.1;
+}

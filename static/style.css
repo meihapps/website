@@ -1,0 +1,215 @@
+:root {
+    color-scheme: light dark;
+    /* Catppuccin Latte/Mocha*/
+    --rosewater: light-dark(#dc8a78, #f5e0dc);
+    --flamingo: light-dark(#dd7878, #f2cdcd);
+    --pink: light-dark(#ea76cb, #f5c2e7);
+    --mauve: light-dark(#8839ef, #cba6f7);
+    --red: light-dark(#d20f39, #f38ba8);
+    --maroon: light-dark(#e64553, #eba0ac);
+    --peach: light-dark(#fe640b, #fab387);
+    --yellow: light-dark(#df8e1d, #f9e2af);
+    --green: light-dark(#40a02b, #a6e3a1);
+    --teal: light-dark(#179299, #94e2d5);
+    --sky: light-dark(#04a5e5, #89dceb);
+    --sapphire: light-dark(#209fb5, #74c7ec);
+    --blue: light-dark(#1e66f5, #89b4fa);
+    --lavender: light-dark(#7287fd, #b4befe);
+    --text: light-dark(#4c4f69, #cdd6f4);
+    --subtext1: light-dark(#5c5f77, #bac2de);
+    --subtext0: light-dark(#6c6f85, #a6adc8);
+    --overlay2: light-dark(#7c7f93, #9399b2);
+    --overlay1: light-dark(#8c8fa1, #7f849c);
+    --overlay0: light-dark(#9ca0b0, #6c7086);
+    --surface2: light-dark(#acb0be, #585b70);
+    --surface1: light-dark(#bcc0cc, #45475a);
+    --surface0: light-dark(#ccd0da, #313244);
+    --base: light-dark(#eff1f5, #1e1e2e);
+    --mantle: light-dark(#e6e9ef, #181825);
+    --crust: light-dark(#dce0e8, #11111b);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    src: url("static/assets/fira_code.ttf");
+}
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mantle);
+    color: var(--text);
+    display: block;
+    font-family: "Fira Code", monospace;
+}
+
+.wrapper {
+    justify-items: center;
+    display: grid;
+    max-width: 48rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    grid-template-columns: [main] auto;
+    grid-template-rows: [header] auto [main] auto [section] auto [footer] auto;
+    gap: 1rem;
+}
+
+header {
+    grid-column: main;
+    grid-row: header;
+    display: grid;
+    grid-template-columns: [line1] 128px [line2] auto [line3] 6rem;
+    grid-template-rows: [line1] 64px [line2] 64px;
+    gap: 1px;
+    background-color: var(--mauve);
+    border: 1px solid var(--mauve);
+    width: 100%;
+}
+
+header > a {
+    grid-column: line1;
+    grid-row: line1 / span 2;
+    background-color: var(--base);
+}
+
+header > h1 {
+    grid-column: line2;
+    background-color: var(--base);
+    margin: 0;
+    padding-top: 1.25rem;
+    font-size: 1.25rem;
+}
+
+header > p {
+    grid-column: line3;
+    background-color: var(--base);
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+header > nav {
+    grid-row: line2;
+    grid-column: line2 / span 2;
+    display: flex;
+    gap: 1px;
+}
+
+header > nav > a {
+    padding: 1.25rem 2.375rem 0.75rem 2.375rem;
+    text-decoration: none;
+    background-color: var(--base);
+}
+
+header > nav > p {
+    background-color: var(--base);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 393px) {
+    header > nav > p {
+        display: none;
+    }
+}
+
+header > nav > a:hover {
+    background-color: var(--mauve);
+    color: var(--green);
+}
+
+main {
+    grid-column: main;
+    grid-row: main;
+    border: 1px solid var(--mauve);
+    width: 100%;
+    padding: 1rem;
+}
+
+section {
+    grid-column: main;
+    grid-row: section;
+    border: 1px solid var(--mauve);
+    width: 100%;
+    padding: 1rem;
+}
+
+section > p {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    text-wrap: balance;
+}
+
+article {
+    text-align: center;
+}
+
+footer {
+    grid-column: main;
+    grid-row: footer;
+    border: 1px solid var(--mauve);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+footer > a {
+    display: inline-block;
+    margin: 0;
+    width: 88px;
+    height: 31px;
+    margin: 0.25rem;
+}
+
+footer > picture {
+    display: inline-flex;
+    margin: 0.25rem;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    color: var(--subtext0);
+}
+
+.subtle {
+    color: var(--overlay1);
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.subtle + p {
+    display: inline-block;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+code {
+    text-wrap-mode: wrap;
+}
