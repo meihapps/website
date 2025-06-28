@@ -1,5 +1,8 @@
 <header>
-    <?php include "includes/pfp.php"; ?>
+    <?php
+    include "includes/pfp.php";
+    echo $_SERVER["PHP_SELF"];
+    ?>
     <h1>mei happs</h1>
     <p class="subtle">
         (she/it)
