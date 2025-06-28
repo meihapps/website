@@ -204,10 +204,6 @@ h2 {
     margin: auto;
 }
 
-.subtle + p {
-    display: inline-block;
-}
-
 img {
     image-rendering: pixelated;
 }
