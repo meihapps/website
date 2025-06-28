@@ -35,6 +35,12 @@
     src: url("assets/fira_code.ttf");
 }
 
+@font-face {
+    font-display: swap;
+    font-family: "Shantell Sans";
+    src: url("assets/shantell_sans.ttf");
+}
+
 html,
 body {
     box-sizing: border-box;
@@ -51,7 +57,7 @@ body {
     background-color: var(--mantle);
     color: var(--text);
     display: block;
-    font-family: "Fira Code";
+    font-family: "Shantell Sans";
 }
 
 .wrapper {
@@ -151,6 +157,7 @@ section > p {
 }
 
 p {
+    font-family: "Shantell Sans";
     text-align: center;
     text-wrap: balance;
 }
@@ -212,4 +219,5 @@ img {
 
 code {
     text-wrap-mode: wrap;
+    font-family: "Fira Code";
 }
