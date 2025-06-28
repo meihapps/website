@@ -51,6 +51,7 @@ body {
     background-color: var(--mantle);
     color: var(--text);
     display: block;
+    font-family: "Fira Code";
 }
 
 .wrapper {
