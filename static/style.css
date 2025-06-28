@@ -56,8 +56,8 @@ body {
 body {
     background-color: var(--mantle);
     color: var(--text);
-    display: block;
     font-family: "Shantell Sans";
+    text-align: center;
 }
 
 .wrapper {
@@ -117,16 +117,13 @@ header > nav > a {
     background-color: var(--base);
 }
 
-header > nav > p {
+header > nav > .nav-spacer {
     background-color: var(--base);
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    flex-grow: 1;
 }
 
 @media (max-width: 393px) {
-    header > nav > p {
+    header > nav > .nav-spacer {
         display: none;
     }
 }
@@ -157,17 +154,13 @@ section {
 }
 
 section > p {
-    text-align: center;
 }
 
 p {
-    font-family: "Shantell Sans";
-    text-align: center;
     text-wrap: balance;
 }
 
 article {
-    text-align: center;
 }
 
 footer {
@@ -196,7 +189,6 @@ footer > picture {
 h1,
 h2 {
     font-weight: 400;
-    text-align: center;
 }
 
 h2 {
@@ -205,7 +197,6 @@ h2 {
 
 .subtle {
     color: var(--overlay1);
-    text-align: center;
 }
 
 .center {
@@ -224,4 +215,13 @@ img {
 code {
     text-wrap-mode: wrap;
     font-family: "Fira Code";
+}
+
+pre {
+    text-align: left;
+}
+
+ul,
+ol {
+    text-align: left;
 }

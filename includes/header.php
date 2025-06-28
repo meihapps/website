@@ -11,6 +11,6 @@
         <a href="/blog" <?php if (
             $_SERVER["REQUEST_URI"] == "/blog"
         ) { ?> class="active" <?php } ?>>blog</a>
-        <p></p>
+        <div class="nav-spacer"></div>
     </nav>
 </header>

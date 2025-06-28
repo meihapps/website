@@ -1,4 +1,12 @@
-<?php global $title; ?>
+<?php
+/** @var string $title */
+
+$post_file = "posts/" . $title . ".php";
+if (!file_exists($post_file)) {
+    http_response_code(404);
+    exit("Post not found");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,10 +15,14 @@
     <div class="wrapper">
         <?php include "includes/header.php"; ?>
         <main>
-            <h2><?= str_replace("_", " ", $title) ?></h2>
+            <h2><?= htmlspecialchars(
+                str_replace("_", " ", $title),
+                ENT_QUOTES,
+                "UTF-8"
+            ) ?></h2>
         </main>
         <section>
-            <?php include "posts/" . $title . ".php"; ?>
+            <?php include $post_file; ?>
         </section>
         <?php include "includes/footer.php"; ?>
     </div>

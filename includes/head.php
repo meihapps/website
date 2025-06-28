@@ -1,4 +1,6 @@
-<?php global $title; ?>
+<?php
+/** @var string $title */
+?>
 
 <head>
     <meta charset="utf-8">
