@@ -32,7 +32,7 @@
 @font-face {
     font-display: swap;
     font-family: "Fira Code";
-    src: url("static/assets/fira_code.ttf");
+    src: url("assets/fira_code.ttf");
 }
 
 html,
@@ -51,7 +51,6 @@ body {
     background-color: var(--mantle);
     color: var(--text);
     display: block;
-    font-family: "Fira Code", monospace;
 }
 
 .wrapper {
