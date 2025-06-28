@@ -6,10 +6,10 @@
     </p>
     <nav>
         <a href="/" <?php if (
-            $_SERVER["PHP_SELF"] == "/"
+            $_SERVER["REQUEST_URI"] == "/"
         ) { ?> class="active" <?php } ?>>home</a>
         <a href="/blog" <?php if (
-            $_SERVER["PHP_SELF"] == "/blog"
+            $_SERVER["REQUEST_URI"] == "/blog"
         ) { ?> class="active" <?php } ?>>blog</a>
         <p></p>
     </nav>
