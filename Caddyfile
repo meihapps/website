@@ -1,0 +1,7 @@
+meihapps.gay {
+    root * /home/mei/website
+    encode gzip
+    
+    php_fastcgi 127.0.0.1:9000
+    file_server
+}
