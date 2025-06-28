@@ -1,7 +1,7 @@
 <header>
     <?php
     include "includes/pfp.php";
-    echo $_SERVER["DOCUMENT_ROOT"];
+    echo $_SERVER["REQUEST_URI"];
     ?>
     <h1>mei happs</h1>
     <p class="subtle">
