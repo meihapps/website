@@ -12,8 +12,6 @@ foreach (scandir("posts") as $entry) {
 $title = "mei happs' blog";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <?php include "includes/head.php"; ?>
 <body>
     <div class="wrapper">

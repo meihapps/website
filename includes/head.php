@@ -1,7 +1,8 @@
 <?php
 /** @var string $title */
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self';">

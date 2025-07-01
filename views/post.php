@@ -21,8 +21,6 @@ if (preg_match($date_pattern, $post_content, $matches)) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <?php include "includes/head.php"; ?>
 <body>
     <div class="wrapper">
