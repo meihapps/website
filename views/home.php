@@ -12,11 +12,11 @@ $title = "mei happs"; ?>
                 </p>
             </main>
             <section>
-                <p>
-                    <strong>social</strong><br><br>
-                    <a href="https://git.gay/mei">git.gay</a><br>
-                    discord (meihapps)<br>
-                </p>
+                <h2>social</h2>
+                <ul>
+                    <li><a href="https://git.gay/mei">git.gay</a></li>
+                    <li>discord (meihapps)</li>
+                </ul>
             </section>
             <?php include "includes/footer.php"; ?>
         </div>

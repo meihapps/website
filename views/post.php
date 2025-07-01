@@ -4,7 +4,20 @@
 $post_file = "posts/" . $title . ".php";
 if (!file_exists($post_file)) {
     http_response_code(404);
-    exit("Post not found");
+    require_once "views/404.php";
+    exit();
+}
+
+// Extract date and content from post file using output buffering
+ob_start();
+include $post_file;
+$post_content = ob_get_clean();
+
+$date_pattern = '/<p class="subtle">([^<]+)<\/p>/';
+$date = "";
+if (preg_match($date_pattern, $post_content, $matches)) {
+    $date = $matches[1];
+    $post_content = preg_replace($date_pattern, "", $post_content, 1);
 }
 ?>
 
@@ -20,10 +33,13 @@ if (!file_exists($post_file)) {
                 ENT_QUOTES,
                 "UTF-8"
             ) ?></h2>
+            <?php if ($date): ?>
+                <p class="subtle"><?= htmlspecialchars($date) ?></p>
+            <?php endif; ?>
+            <article>
+                <?= $post_content ?>
+            </article>
         </main>
-        <section>
-            <?php include $post_file; ?>
-        </section>
         <?php include "includes/footer.php"; ?>
     </div>
 <script src="/static/prism.js"></script>

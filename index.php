@@ -26,5 +26,5 @@ if ($match) {
     require_once $match["target"];
 } else {
     http_response_code(404);
-    exit("Page not found");
+    require_once "views/404.php";
 }

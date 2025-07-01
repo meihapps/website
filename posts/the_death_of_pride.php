@@ -11,16 +11,22 @@ this is a very slightly paraphrased definition from the cambridge dictionary.<br
 
 to make it abundantly clear, i do not believe all programming is art! that would be an insane take to have, but some programming definitely is. here are some examples of programming that i would not consider art:<br><br>
 
-- most uni computer science coursework (with exceptions for things like "final year project" and other similar things where you have a lot of freedom, but only if you exercise it)<br>
-- boilerplate code<br>
-- anything ai generated, you didn't make or do this, even if you find it beautiful and/or interesting (which i do not)<br><br>
+<ul>
+<li>most uni computer science coursework (with exceptions for things like "final year project" and other similar things where you have a lot of freedom, but only if you exercise it)</li>
+<li>boilerplate code</li>
+<li>anything ai generated, you didn't make or do this, even if you find it beautiful and/or interesting (which i do not)</li>
+</ul>
 
 and some examples of art!<br><br>
-- this is a solution i wrote for <a href="https://leetcode.com/problems/prime-subtraction-operation">leetcode 2601: prime subtraction operation</a> (function signature ommitted for aesthetics). there will be some debate here over whether this would be deemed beautiful, and that's entirely fair! beauty is subjective but i believe this solution's blatant disregard for readability in favour of showcasing some abhorrent quirks of the python programming language, while trying it's best not to compromise on standards (as written, not as intended) quite beautiful. while i am incredibly proud of this code, i don't believe it's high quality. if i encountered code like this in a professional setting i would do everything in my power to ensure i never worked with the person that wrote it again! but even still, there's beauty in how much effort it takes to understand this code.<br>
+<ul>
+<li>this is a solution i wrote for <a href="https://leetcode.com/problems/prime-subtraction-operation">leetcode 2601: prime subtraction operation</a> (function signature ommitted for aesthetics). there will be some debate here over whether this would be deemed beautiful, and that's entirely fair! beauty is subjective but i believe this solution's blatant disregard for readability in favour of showcasing some abhorrent quirks of the python programming language, while trying it's best not to compromise on standards (as written, not as intended) quite beautiful. while i am incredibly proud of this code, i don't believe it's high quality. if i encountered code like this in a professional setting i would do everything in my power to ensure i never worked with the person that wrote it again! but even still, there's beauty in how much effort it takes to understand this code.</li>
+</ul>
 <pre><code class="language-python">
 <?php include "static/the_death_of_pride/prime_subtraction_operation.py"; ?>
 </code></pre>
-- the single best piece of programming as an art form i have ever encountered is <a href="https://aphyr.com/posts/342-typing-the-technical-interview">typing the technical interview</a>. read it if you haven't already!<br><br>
+<ul>
+<li>the single best piece of programming as an art form i have ever encountered is <a href="https://aphyr.com/posts/342-typing-the-technical-interview">typing the technical interview</a>. read it if you haven't already!</li>
+</ul>
 
 i guess my main point in all of this is that art is about the process. the tiny decisions that go into the production of the piece, not the end result. when i wrote my silly little leetcode solution, i wasn't making decisions based on what would solve the problem, i was making them based on what would be interesting. there were countless easier ways to do it, but they simply didn't bring me as much joy as knowing that i could use these evil design patterns.<br><br>
 

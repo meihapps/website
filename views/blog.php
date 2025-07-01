@@ -22,15 +22,13 @@ $title = "mei happs' blog";
             <p>
                 this is where i put my evil opinions on software and other foolish endeavours
             </p>
-        </main>
-        <section>
             <?php
             foreach ($posts as $post) {
                 include "includes/post_list_entry.php";
             }
             unset($post);
             ?>
-        </section>
+        </main>
         <?php include "includes/footer.php"; ?>
     </div>
 </body>

@@ -66,14 +66,11 @@ body {
     max-width: 48rem;
     margin: 1rem auto;
     padding: 1rem;
-    grid-template-columns: [main] auto;
-    grid-template-rows: [header] auto [main] auto [section] auto [footer] auto;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
 header {
-    grid-column: main;
-    grid-row: header;
     display: grid;
     grid-template-columns: [line1] 128px [line2] auto [line3] 6rem;
     grid-template-rows: [line1] 64px [line2] 64px;
@@ -138,16 +135,12 @@ header > nav > a:hover {
 }
 
 main {
-    grid-column: main;
-    grid-row: main;
     border: 1px solid var(--mauve);
     width: 100%;
     padding: 1rem;
 }
 
 section {
-    grid-column: main;
-    grid-row: section;
     border: 1px solid var(--mauve);
     width: 100%;
     padding: 1rem;
@@ -164,8 +157,6 @@ article {
 }
 
 footer {
-    grid-column: main;
-    grid-row: footer;
     border: 1px solid var(--mauve);
     width: 100%;
     display: flex;
@@ -217,7 +208,12 @@ pre {
     text-align: left;
 }
 
-ul,
-ol {
+section > ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+article {
     text-align: left;
 }
