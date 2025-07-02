@@ -1,5 +1,6 @@
 {
   "require": {
-    "altorouter/altorouter": "1.1.0"
+    "altorouter/altorouter": "1.1.0",
+    "league/commonmark": "^2.0"
   }
 }
