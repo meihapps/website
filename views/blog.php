@@ -1,13 +1,20 @@
 <?php
 $posts = [];
 foreach (scandir("posts") as $entry) {
-    if ($entry == "." || $entry == "..") {
+    if ($entry == "." || $entry == ".." || !str_ends_with($entry, ".jsonld")) {
         continue;
     }
-    $posts[] = [
-        "title" => str_replace(["_", ".php"], [" ", ""], $entry),
-        "link" => "blog/" . str_replace(".php", "", $entry),
-    ];
+
+    // Load JSON-LD file to get proper title
+    $json_content = file_get_contents("posts/" . $entry);
+    $post_data = json_decode($json_content, true);
+
+    if ($post_data && isset($post_data["headline"])) {
+        $posts[] = [
+            "title" => $post_data["headline"],
+            "link" => "blog/" . str_replace(".jsonld", "", $entry),
+        ];
+    }
 }
 $title = "mei happs' blog";
 ?>

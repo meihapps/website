@@ -153,7 +153,8 @@ p {
     text-wrap: balance;
 }
 
-article {
+article p {
+    text-wrap: wrap;
 }
 
 footer {
