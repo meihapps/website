@@ -18,7 +18,8 @@ if (!$post_data) {
 }
 
 $date = $post_data["datePublished"] ?? "";
-$post_content = $post_data["articleBody"] ?? "";
+$content_file = $post_data["articleBody"] ?? "";
+$post_content = file_get_contents($content_file);
 
 // Replace code file references with actual file content
 $post_content = preg_replace_callback(
