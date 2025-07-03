@@ -127,7 +127,6 @@ header > nav > .nav-spacer {
 
 header > nav > a:hover {
     background-color: var(--mauve);
-    color: var(--green);
 }
 
 .active {
@@ -236,10 +235,6 @@ main ol li article h3 a {
     transition: color 0.2s ease;
 }
 
-main ol li article h3 a:hover {
-    color: var(--green);
-}
-
 main ol li article time {
     font-size: 0.9rem;
 }
@@ -253,4 +248,8 @@ main ol {
 main ol li {
     margin: 0;
     padding: 0;
+}
+
+a:hover {
+    color: var(--green);
 }
