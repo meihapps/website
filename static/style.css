@@ -213,3 +213,44 @@ article {
 article blockquote {
     text-align: center;
 }
+
+main ol li article {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--surface1);
+}
+
+main ol li:last-child article {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+main ol li article h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+}
+
+main ol li article h3 a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+main ol li article h3 a:hover {
+    color: var(--green);
+}
+
+main ol li article time {
+    font-size: 0.9rem;
+}
+
+main ol {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+main ol li {
+    margin: 0;
+    padding: 0;
+}

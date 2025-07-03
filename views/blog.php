@@ -5,7 +5,7 @@ foreach (scandir("posts") as $entry) {
         continue;
     }
 
-    // Load JSON-LD file to get proper title
+    // Load JSON-LD file to get proper title and date
     $json_content = file_get_contents("posts/" . $entry);
     $post_data = json_decode($json_content, true);
 
@@ -13,9 +13,18 @@ foreach (scandir("posts") as $entry) {
         $posts[] = [
             "title" => $post_data["headline"],
             "link" => "blog/" . str_replace(".jsonld", "", $entry),
+            "date" => $post_data["datePublished"] ?? null,
         ];
     }
 }
+
+// Sort posts by date (newest first)
+usort($posts, function ($a, $b) {
+    if (!$a["date"] || !$b["date"]) {
+        return 0;
+    }
+    return strtotime($b["date"]) - strtotime($a["date"]);
+});
 $title = "mei happs' blog";
 ?>
 
@@ -27,12 +36,19 @@ $title = "mei happs' blog";
             <p>
                 this is where i put my evil opinions on software and other foolish endeavours
             </p>
-            <?php
-            foreach ($posts as $post) {
-                include "includes/post_list_entry.php";
-            }
-            unset($post);
-            ?>
+            <p class="subtle">
+                <a href="/feed.json">json feed</a> · <a href="/rss.xml">rss feed</a>
+            </p>
+            <ol>
+                <?php
+                foreach ($posts as $post) {
+                    echo "<li>";
+                    include "includes/post_list_entry.php";
+                    echo "</li>";
+                }
+                unset($post);
+                ?>
+            </ol>
         </main>
         <?php include "includes/footer.php"; ?>
     </div>
