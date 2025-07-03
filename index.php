@@ -7,6 +7,8 @@ try {
     $router->map("GET", "/", "views/home.php");
     $router->map("GET", "/blog", "views/blog.php");
     $router->map("GET", "/blog/[*:title]", "views/post.php");
+    $router->map("GET", "/feed.json", "views/feed.php");
+    $router->map("GET", "/rss.xml", "views/rss.php");
 } catch (Exception $e) {
     error_log($e->getMessage());
     http_response_code(500);

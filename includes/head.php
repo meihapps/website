@@ -12,5 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/static/balatro.css">
     <link rel="stylesheet" type="text/css" href="/static/prism.css">
     <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico">
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
     <title><?= $title ?></title>
 </head>
