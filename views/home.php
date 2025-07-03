@@ -6,12 +6,13 @@ $title = "mei happs"; ?>
         <?php include "includes/header.php"; ?>
         <main>
             <p>
-                im a programmer because i like puzzles. my toxic traits are that i like minimal design a little too much and i have a favourite font and colour palette.
+                i write code like it matters and spend equal time wondering if that's naive or the only way anything good gets made.
             </p>
         </main>
         <section>
             <h2>social</h2>
             <ul>
+                <li><a href="https://github.com/meihapps">github</a></li>
                 <li><a href="https://git.gay/mei">git.gay</a></li>
                 <li>discord (meihapps)</li>
             </ul>
