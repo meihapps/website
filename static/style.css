@@ -224,12 +224,12 @@ main ol li:last-child article {
     margin-bottom: 0;
 }
 
-main ol li article h3 {
+main ol li article h2 {
     margin: 0 0 0.5rem 0;
     font-weight: 400;
 }
 
-main ol li article h3 a {
+main ol li article h2 a {
     text-decoration: none;
     color: var(--text);
     transition: color 0.2s ease;
